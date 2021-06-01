@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btnClass').click(function(){
+                    $('#AddCLass').addClass("text-danger");
+                })
+                $('#btnTogg').click(function () {
+                    $('#ToggClass').toggle();
+                })
+                $('#btnAppnd').click(function () {
+                    $('#AppndClass').append("<p>este es el texto que se añade</p>")
+                })
+                $('#btnShow').click(function () {
+                    $('#ShHiClass').show();
+                })
+                $('#btnHide').click(function () {
+                    $('#ShHiClass').hide();
+                })
+                $('#btnSldUp').click(function () {
+                    $('#Slide').slideUp();
+                })
+                $('#btnSldDwn').click(function () {
+                    $('#Slide').slideDown();
+                })
+                $('#btnSldTg').click(function () {
+                    $('#SlideT').slideToggle();
+                })
+                $('#btnFadeIn').click(function () {
+                    $('#Fade').fadeIn();
+                })
+                $('#btnFadeOut').click(function () {
+                    $('#Fade').fadeOut();
+                })
+                $('#btnBefore').click(function () {
+                    $('#texto').before("<p>Texto Insertado antes</p>");
+                })
+                $('#btnAfter').click(function () {
+                    $('#texto').after("<p>Texto Insertado despues</p>");
+                })
+                $('#btnHtml').click(function () {
+                    $('#html').html("Texto Cambiado <br> Mediante Metodo HTML");
+                })
+                $('#btnAtrr').click(function () {
+                    $('#atrr').attr("class","alert alert-primary");
+                })
+                $('#btnVal').click(function () {
+                    $('input:text').val("Valor Agregado x Jquery");
+                })
+                $('#btnTxt').click(function () {
+                    $('#txt').text("Texto modificado mediante funcion text()");
+                })
+            })
+          </script>
+         
+          
+    </head>
+    <body>
+        <div >
+            <h3>Add method</h3>
+            <button id ="btnClass">Cambiar el texto a Rojo</button>
+            <p id="AddCLass">
+                Este es el texto
+
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>Toggle method</h3>
+            <button id ="btnTogg">Desaparecer texto</button>
+            <p id="ToggClass">
+                Este es el texto q Desaparece
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>Append method</h3>
+            <button id ="btnAppnd">Agregar Parrafo</button>
+            <p id="AppndClass">
+                Este es el texto q se inserta
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>HIde / Show method</h3>
+            <button id ="btnHide">Ocultar Parrafo</button>
+            <button id ="btnShow">Mostrar Parrafo</button>
+            <p id="ShHiClass">
+                Este es el texto q se oculta/muestra
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>SlideUp / SlideDown method</h3>
+            <button id ="btnSldUp">Desliza hacia arriba</button>
+            <button id ="btnSldDwn">Desliza hacia abajo</button>
+            <p id="Slide">
+                Este es el texto q se desliza
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>SlideToggle method</h3>
+            <button id ="btnSldTg">Desliza hacia arriba/abajo</button>
+            <p id="SlideT">
+                Este es el texto q se desliza
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>Fadein / Fade Out method</h3>
+            <button id ="btnFadeOut">Desvanece el texto</button>
+            <button id ="btnFadeIn">Reaparece el texto</button>
+            <p id="Fade">
+                Este es el texto q se desliza <br>
+                Este es el texto q se desliza <br>
+                Este es el texto q se desliza <br>
+                Este es el texto q se desliza <br>
+                Este es el texto q se desliza <br>
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>Before / After  method</h3>
+            <button id ="btnBefore">Inserta antes del  texto</button>
+            <button id ="btnAfter">Inserta despues del texto</button>
+            <p id="texto" class="text-danger">
+                Este es el texto
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>HTML method</h3>
+            <button id ="btnHtml">Cambia etiqueta HTML</button>
+            <p id="html">
+                Este es el texto original
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>Atrr method</h3>
+            <button id ="btnAtrr">Agrega atributo al texto</button>
+            <p id="atrr">
+                Este es el texto original
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>Val method</h3>
+            <button id ="btnVal">Agrega valor  al input</button>
+            <br>
+            <p>
+                Name: <input type="text" name="user">
+            </p>
+        </div>
+        <hr>
+        <div >
+            <h3>Text method</h3>
+            <button id ="btnTxt">Cambia texto</button>
+            
+            <p id="txt">
+                Este es el texto original
+            </p>
+        </div>
+    </body>
+   
+</html>
